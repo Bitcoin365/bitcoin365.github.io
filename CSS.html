@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <Head>
+      <title>CSS</title>
+      <link href="styles.css" rel="stylesheet">
+      <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+    </Head>
+    <body>
+    <header>
+      <nav id="top">
+        <a href="./HTML.html">HTML</a>
+        <a href="CSS.html">CSS</a>
+        <a href="./Leisure.html">2nd page</a>
+      </nav>
+    </header>
+    <img class="back" src="https://www.oxfordwebstudio.com/user/pages/06.da-li-znate/sta-je-css/sta-je-css.png">
+    <br>
+      <main>
+      <table id="scr" class="tb" border="2">
+          <tr>
+            <th class="cool">CSS</th>
+            <th>Ruleset</th>
+            <th>Inline Style Attribute</th>
+            <th>Internal Stylesheet</th>
+          </tr>
+          <tr>
+            <th>Element Selector</th>
+            <td>*element name*{:;}</td>
+            <td>Place in opening tag</td>
+            <td rowspan="5"><img src="style.jpg" width="200"></td>
+          </tr>
+          <tr>
+            <th>Declaration block/Attribute</th>
+            <td>{ ???:???; }</td>
+            <td>style='???:???;'</td>
+          </tr>
+          <tr>
+            <th>Declaration</th>
+            <td>???:???;</td>
+            <td>???:???;</td>
+          </tr>
+          <tr>
+            <th>Property</th>
+            <td>???:</td>
+            <td>=???:</td>
+          </tr>
+          <tr>
+            <th>Value</th>
+            <td>:???;</td>
+            <td>:???;</td>
+          </tr>
+        </table>
+        <br><br>
+        <div class="box">
+          <ul>
+            <h3>CSS fundementals</h3>
+            <li>Link CSS file with HTML (link/href=''/rel='stylesheet') *put in the head element*</li>
+            <li>Link externaly hosted fonts by placing the embed code in the head element and selecting the font-family in css</li>
+            <li>Link self hosted fonts (@font-face {family-font: {FontName}; src: url('{relative path}') format('otf/ttp/woff/woff2'), url('{relative path}') format('truetype');})</li>
+            <li>Type selector changes style of all of the same element (?{:;})</li>
+            <li>Star selector to change all elements in one go (*{???}) </li>
+            <li>Class selector to change element/s (.???{}, class="??? ???") *Class attribute can have multiple values. Class selector overrides type selectors*</li>
+            <li>ID selector to change single elements (#???{}, id="???") *id can only have single value. id value can only be used once per page. ID selectors overrides type/class*</li>
+            <li>Importent Declaration value overrides everything (?{??:?? !important;})</li>
+            <li>Attribute Selector to style elements which contain specific attributes ([???]{:;}), or which contain specific elements and attributes (???[??*='???'] {:;})</li>
+            <li>Chaining will only change the style if the Type and Class selectors are met (?.??{:;}, class=?)</li>
+            <li>Descendant Combinator will only target elements that are nested within other element/class (.??? ?? {:;},? class=>/?>)</li>
+            <li>Multiple Selectors will change multiple element types using on CSS block (???, ??? {})</li>
+          </ul>
+          <ul>
+            <h3>Visual Rules</h3>
+            <li>Coloured text (color)</li>
+            <li>Style page beckground (background) ?</li>
+            <li>Style an element's background colour (background-color)</li>
+            <li>Font type (font-family) *place font name in 'quotes' if its more than one word*</li>
+            <li>Font stack is a group of similar looking fonts. The browser will try the first, then second... (font-family: ???, ???;)</li>
+            <li>Use Serif or Sans Serif as a fallback font if no other is available (???, serif;)</li>
+            <li>Font Size (font-size: px;)</li>
+            <li>Text boldness/thinness (font-weight: bold/bolder/lighter/normal/1-1000;)</li>
+            <li>Italicize/Bolden an elements' text (font-style: italic/normal;)</li>
+            <li>Make all of an elements' text capital (text-transform: uppercase/lowercase/capitalize;)</li>
+            <li class="bul">Change bullet point type (list-style-type: circle/square/upper-roman/lower-alpha;)</li>
+            <li>Bullet point image (list-style-image: url('sqpurple.gif');)</li>
+            <li class="wrap">Bullet/text wrap (list-style-position: inside/outside;)</li>
+            <li>Bullet point style shorthand (list-style: type position image;</li>
+            <li>Letter Spacing (letter-spacing: ??px/?.?em)</li>
+            <li>Word Spacing (word-spacing: ??px/?.?em)</li>
+            <li>Line height (line-height: ?.?/?%/??px/?.?em)</li>
+            <li>Horizontal text alignment (text-align: left/center/right/justify) *it aligns left by default* </li>
+            <li>Opacity (opacity: {0-1};)</li>
+            <li>Set a background image (background-image: url('???');)</li>
+            <li>Hide/show an element (visibility: hidden/visible/collapse;)</li>
+            <li>Background size (background-size: contain/cover/%/px) ?</li>
+            <li>Background position (background-position: center)?</li>
+            <li>Vertical alignment (Vertical-align) ?</li>
+          </ul>
+          <ul>
+            <h3>Border/Padding/Margin</h3>
+            <li>Width & Height of content (width/height: px/%;)</li>
+            <li>Min & Max width (min-width/max-width)</li>
+            <li>Min & Max height (min-height/max-height)</li>
+            <li>Use overflow if content goes outside width/height boundries (overflow: scroll/visible/hidden)</li>
+            <li>Border thickness/style/color (border: {width} {style} {color};) *default border settings: medium none color*</li>
+            <li>Border radius (border-radius: px/%)</li>
+            <li>Padding is the space between the content and the border (padding: px/%;)</li> 
+            <li>Independent Padding properties (padding-top:/padding-right:/padding-bottom:/padding-left:/)</li>
+            <li>Padding shorthand (padding: {T R B L}/{T RL B}/{TB RL};)</li>
+            <li>Margin is the space between the border and edge of element (margin)</li>
+            <li>Independant Margin properties (margin-top:/margin-bottom:/margin-left:/margin-right:)</li>
+            <li>Margin shorthand (margin: {T R B L}/{T RL B}/{TB RL};)</li>
+            <li>Center horizontal margins (margin: 0 auto;) *Must be contained in parent element*</li>
+            <li>*Vertical margin collapses to the higher margin, while horizontal margin doesn't*</li>
+            <li>Reset the default margin & padding (margin: 0; padding: 0;)</li>
+            <li>Type of box model a browser uses (box-sizing:) *Default is content box*</li>
+            <li>Content box adds padding/margin/bonder onto width/height (content-box;)</li>
+            <li>Border box subtracts padding/margin/bonder onto width/height (border-box;)</li>
+          </ul>
+          <ul>
+            <h3>Pseudo-class selectors</h3>
+            <li>???:hover, :focus, :visited, :disabled, :active, :before {}</li>
+          </ul>
+          <ul>
+            <h3>Display/Positioning</h3>
+            <li>Position an element (position: ??)</li>
+            <ul class="no">
+              <li>Set element to default position (static;)</li>
+              <li>Move an element from its default position using top/right...(relative; top:/bottom:/right:/left: px/em/%;)*Won't affect neighboring elements*</li>
+              <li>All other elements will ignore this element (absolute; top:/bottom:/right:/left: px/em/%;)*Won't affect neighboring elements*</li>
+              <li>Element will be fixed to the page (fixed; top:/bottom:/right:/left: px/em/%;) </li>
+              <li>Element will stick to the page after its offset properties (sticky; top:/bottom:/right:/left: px/em/%;)</li>
+            </ul>
+            <li>Display</li>
+            <ul class="no">
+              <li>Inline value will diplay elements Inline (inline;) *em/strong/a are inline by default. Height/width can't be specified*</li>
+              <li>Block displays element on new line (block;) *h1-h6/p/div/footer are block by default. Height/width can be specified*</li>
+              <li>inline-block displays block element on same line (inline-block) *img is inline-block by default. Height/width can be specified*</li>
+            </ul>
+            <li>z-index brings element to the front when overlapping (z-index:)*default value is 0*</li>
+            <li>Float move an element as far left/right as possible (float: right/left;) *Element must have width*</li>
+            <li>Clear specifies how elements show display when they overlap when using the float (clear: left/right/both/none)</li>
+          </ul>
+          <ul>
+            <h3>Color</h3>
+            <li>#??????{?}</li>
+            <li>rgb{a}(??, ??, ??{,?.?})</li>
+            <li>hsl{a}(???, ??%, ??%{,?.?})</li>
+            <li>{ } is the opacity</li>
+          </ul>
+          <ul>
+            <h3>Flexbox</h3>
+            <li>Flexbox container block (Display: flex;)</li>
+            <li>Inline multiple flexbox containers (display: inline-flex;)</li>
+            <ul class="no">
+              <li>Position flex items on the X(main) axis (justify-content:)</li>
+              <ul class="no">
+                <li>Flex items will be aligned left (:flex-start;)</li>
+                <li>Items will be aligned right (:flex-end;)</li>
+                <li>Item will be centered in flex container (:center)</li>
+                <li>Items will have equal space around (:space-around)</li>
+                <li>Items will have equal space between each other (:space-between)</li>
+              </ul>
+              <li>Position items on the Y(cross) axis (align-items:)*for aligning items withins a single row*</li>
+              <ul class="no">
+                <li>Flex items will be positioned to top of container (:flex-start;)</li>
+                <li>Items will be positioned to the bottom of container (:flex-end;)</li>
+                <li>Item will be centered in flex container (:center)</li>
+                <li>The bottom of all items will be aligned (:baseline;)</li>
+                <li>Items will stretch from top to bottom (: stretch)*default. won't work if items have height/max-height*</li>
+              </ul>
+              <li>Position items on the Y axis (align-content:)*for aligning items on multiple rows*</li>
+              <ul class="no">
+                <li>Flex items will be positioned to top of container (:flex-start;)</li>
+                <li>Items will be positioned to the bottom of container (:flex-end;)</li>
+                <li>Item will be centered in flex container (:center)</li>
+                <li>Items will stretch from top to bottom (: stretch)</li>
+                <li>Items will have equal space around (:space-around)</li>
+                <li>Items will have equal space between each other (:space-between)</li>
+              </ul>
+              <li>Item width will expand items proportionately (flex-grow:) *place in flex items. Will not expand if has max-width. defaullt is 0*</li>
+              <li>Items width will shrink proportionately (flex-shrink:) *default is 1. " min/max-width will override.*</li>
+              <li>Set the starting width of flex items berfore stretch/shrink (flex-basis:) "</li>
+              <li>Shrorthand: (flex: {flex-grow}{flex-shrink}{flex-basis};) "</li>
+            </ul>
+            <li>Change direction of items (flex-direction:)</li>
+            <ul class="no">
+              <li>Order items in row left-to-right (:row;) *default*</li>
+              <li>Order items in row right-to-left (row-reverse;)</li>
+              <li>Order items verticaly top-to-bottom (:column)</li>
+              <li>Order items verticaly top-to-bottom (:column-reverse)</li>
+            </ul>
+            <li>Will push the item to the next line (flex-wrap:)</li>
+              <ul class="no">
+                <li>Will move items that don't fit to next line (:wrap;)</li>
+                <li>Will move items to next line in decending order (:wrap-reverse)</li>
+                <li>Won't move to next line (:nowrap) *default*</li>
+              </ul>
+            <li>Flex direction/wrap shorthand (flex-flow: {flex-direction} {flex-wrap};) *Place in parent container*</li>
+            <br>
+            <li>P.S. When using flex direction it'll interchange Main axis with Cross axis</li>
+            <ul class="no">
+                <li>Main axis properties:</li>
+                <ul class="no">
+                  <li>justify-content</li>
+                  <li>flex-wrap</li>
+                  <li>flex-grow</li>  
+                  <li>flex-shrink</li>
+                </ul>
+                <li>Cross axis properties</li>
+                <ul class="no">
+                  <li>align-items</li>
+                  <li>align-content</li>
+                </ul>
+            </ul>
+          </ul>
+        </div>
+        <a href="#scr"><img src="top.svg"></a>
+      </main>
+    </body>
+</html>
