@@ -52,7 +52,7 @@
         </table>
         <br><br>
         <div class="box">
-          <ul>
+          <ul class="whole">
             <h3>CSS fundementals</h3>
             <li>Link CSS file with HTML (link/href=''/rel='stylesheet') *put in the head element*</li>
             <li>Link externaly hosted fonts by placing the embed code in the head element and selecting the font-family in css</li>
@@ -66,8 +66,9 @@
             <li>Chaining will only change the style if the Type and Class selectors are met (?.??{:;}, class=?)</li>
             <li>Descendant Combinator will only target elements that are nested within other element/class (.??? ?? {:;},? class=>/?>)</li>
             <li>Multiple Selectors will change multiple element types using on CSS block (???, ??? {})</li>
+            <li>Comment out in CSS (/* ?? */)</li>
           </ul>
-          <ul>
+          <ul class="whole">
             <h3>Visual Rules</h3>
             <li>Coloured text (color)</li>
             <li>Style page beckground (background) ?</li>
@@ -94,7 +95,7 @@
             <li>Background position (background-position: center)?</li>
             <li>Vertical alignment (Vertical-align) ?</li>
           </ul>
-          <ul>
+          <ul class="whole">
             <h3>Border/Padding/Margin</h3>
             <li>Width & Height of content (width/height: px/%;)</li>
             <li>Min & Max width (min-width/max-width)</li>
@@ -115,11 +116,18 @@
             <li>Content box adds padding/margin/bonder onto width/height (content-box;)</li>
             <li>Border box subtracts padding/margin/bonder onto width/height (border-box;)</li>
           </ul>
-          <ul>
+          <ul class="half">
             <h3>Pseudo-class selectors</h3>
             <li>???:hover, :focus, :visited, :disabled, :active, :before {}</li>
           </ul>
-          <ul>
+          <ul class="half">
+            <h3>Color</h3>
+            <li>#??????{?}</li>
+            <li>rgb{a}(??, ??, ??{,?.?})</li>
+            <li>hsl{a}(???, ??%, ??%{,?.?})</li>
+            <li>{ } is the opacity</li>
+          </ul>
+          <ul class="whole">
             <h3>Display/Positioning</h3>
             <li>Position an element (position: ??)</li>
             <ul class="no">
@@ -139,16 +147,9 @@
             <li>Float move an element as far left/right as possible (float: right/left;) *Element must have width*</li>
             <li>Clear specifies how elements show display when they overlap when using the float (clear: left/right/both/none)</li>
           </ul>
-          <ul>
-            <h3>Color</h3>
-            <li>#??????{?}</li>
-            <li>rgb{a}(??, ??, ??{,?.?})</li>
-            <li>hsl{a}(???, ??%, ??%{,?.?})</li>
-            <li>{ } is the opacity</li>
-          </ul>
-          <ul>
+          <ul class="whole">
             <h3>Flexbox</h3>
-            <li>Flexbox container block (Display: flex;)</li>
+            <li>One dimentional flex container block (Display: flex;)</li>
             <li>Inline multiple flexbox containers (display: inline-flex;)</li>
             <ul class="no">
               <li>Position flex items on the X(main) axis (justify-content:)</li>
@@ -211,6 +212,46 @@
                   <li>align-content</li>
                 </ul>
             </ul>
+          </ul>
+          <ul class="whole">
+            <h3>Grid</h3>
+            <li>Two dimentional grid containter block (display: grid/inline-grid;)</li>
+            <li>Set the number of columns and its width in a grid (grid-template-columns: ??px/%/fr ??px/%/fr;)</li>
+            <li>Set the number of rows and its height in a grid (grid-template-rows: ???px/%/fr ??px/%/fr)</li>
+            <li>Grid shorthand (grid-template: {rows}px/%/fr / {columns}px/%/fr))</li>
+            <li>Set the width of impicit rows (grid-auto-rows: px/%/fr;)</li>
+            <li>Set the width of impicit columns (grid-auto-columns: px/%/fr px/%/fr;)</li>
+            <li>Define where implicit new items are added (grid-auto-flow: row/column/dense;) *row is default*</li>
+            <!--'dense' invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added-->
+            <ul class="no">
+              <li>Fraction measurements in grid (??fr;)</li>
+              <li>Repeat value measurement in grid (: repeat(?, ??px/%/fr);)</li>
+              <li>Set the minimum & maximum width/height of a row/column (; minmax(??px/%/fr, ??px/%/fr) ??;)</li>
+            </ul>
+            <li>Add gaps between grid columns (column-gap: px/%/fr;)</li>
+            <li>Add gaps between grid rows (row-gap: px/%/fr;)</li>
+            <li>Shorthand for grid gaps (gap: {row}px {column}px;)</li>
+            <!--place the following in grid items--><br>
+            <li>stretch item across multiple rows (grid-row-start: ?; grid-row-end: ?;) *place in grid items*</li>
+            <li>" shorthand (grid-row: ? / span ?;)</li>
+            <li>stretch item across multiple columns (grid-column-start: ?; grid-column-end: ?;)</li>
+            <li>" shorthand (grid-column: span ? / ?;)</li>
+            <li>Shorthand for grid rows & columns start & finnish (grid-area: {row-start} / {column-start} / {row-end} / {column-end};)</li>
+            <ul class="no">
+              <li>You can use span to determine how many rows/columns to span (: ? / span ?;)</li>
+            </ul>
+            <li>Name sections of the page and place in grid item (grid-template-areas: "?? ????" "??? ???";)(grid-area: ???;)</li>
+            <li>*Grid items can overlap, just set the z-index*</li><br>
+            <!--Grid Columns are block elements and rows are inline elements-->
+            <li>Position items horizontally in grid container (justify-itmes: start/end/center/stretch;)</li>
+            <li>Position items vertically in grid container (align-items: start/end/center/stretch;)</li>
+            <li>Position the grid containter horizontally (justify-content: start/end/center/stretch/space-around/space-between/space-evenly;)</li>
+            <li>Position the grid containter vertically (align-content: start/end/center/stretch/space-around/space-between/space-evenly;)</li>
+            <li>Position items in grid container shorthand (place-items: {align-items} {justify-items};)</li>
+            <li>Position the grid container shorthand (place-content: {align-content} {justify-content};)</li>
+            <li>Position single items horizontally (justify-self: start/end/center/stretch') *overrides justify-itmes. Place in grid item*</li>
+            <li>Position single items vertically (align-self: start/end/center/stretch') *overrides align-itmes. Place in grid item*</li>
+            <li>Position single items shorthand (place-self: {align-self} {justify-self};) *Place in grid item*</li>
           </ul>
         </div>
         <a href="#scr"><img src="top.svg"></a>
