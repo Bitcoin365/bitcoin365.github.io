@@ -202,10 +202,11 @@ img[src*='top'] {
     background-color: white;
     border-radius: 50%;
 }
-audio {
-    position: relative;
-    top: 17px;
+.audio {
+  display: flex;
+  justify-content: center;
 }
+
 .list {
     display: flex;
     flex-wrap: wrap;
@@ -214,3 +215,4 @@ audio {
 body {
     margin: 0;
 }
+
